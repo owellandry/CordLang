@@ -1,0 +1,13 @@
+imports
+    token
+    prefix
+
+commands
+    command hola
+        description: Saluda al usuario
+        command_slash: true
+    command ping
+        description: Devuelve pong
+        command_slash: false
+
+ready(token{El bot está listo})

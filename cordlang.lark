@@ -1,0 +1,20 @@
+%declare _INDENT _DEDENT _NEWLINE
+
+start: imports_section commands_section ready_statement
+
+imports_section: "imports" _NEWLINE? _INDENT import_item+ _DEDENT
+import_item: "token" | "prefix"
+
+commands_section: "commands" _NEWLINE _INDENT command_block+ _DEDENT
+command_block: "command" WS? CNAME _NEWLINE _INDENT command_prop+ _DEDENT
+command_prop: "description:" MESSAGE _NEWLINE
+            | "command_slash:" WS? BOOLEAN _NEWLINE
+
+ready_statement: "ready(token{" MESSAGE "})" _NEWLINE?
+
+MESSAGE: /[^\n]+/
+BOOLEAN: "true" | "false"
+
+%import common.CNAME
+%import common.WS_INLINE -> WS
+%ignore WS
