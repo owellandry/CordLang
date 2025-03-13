@@ -1,0 +1,15 @@
+{
+    "name": "cordlangbot",
+    "version": "1.0.0",
+    "description": "",
+    "run": "main.cxl",
+    "scripts": {
+        "start": "main",
+        "dev": "main"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "module": "true",
+    "prefix": "!"
+}
