@@ -1,0 +1,12 @@
+import
+    token
+    prefix
+
+
+commands
+    command ping
+        description "Ping the bot"
+        command_slash true
+        execute:
+
+ready(token{el bot esta listo!})
